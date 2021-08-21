@@ -9,8 +9,8 @@ function buttonFunction(){
     buttonPosition();
     btn.style.width = "23px";
     btn.style.height = "23px";
-//    resetTimer();
-    countDown();
+    // resetTimer();
+    // countDown();
     document.getElementById("myTitle").innerHTML = 
     "Button clicked " + counter + " times";
     // document.getElementById("myButton").style.display = "block";
@@ -30,22 +30,21 @@ function randomPosition(){
 }
 
 
-let timeCounter = 4;
-//var timer;
+// let timeCounter = 4;
+var timer;
 
 function textCountDown(){
     btn.innerHTML = timeCounter;
     timeCounter--;
+    console.log("timecounter = " + timeCounter);
 }
 
 function countDown(){
+    console.log("btn.innerHTML = " + btn.innerHTML)
+    timeCounter = 5;
+    clearInterval(timer);
     btn.innerHTML = 5;
-    var timer = setInterval(textCountDown, 1000);
-//    btn.onclick = function(){
-//        clearInterval(timer);
-//        timeCounter = 5;
-//        timer = setInterval(textCountDown, 1000);
-//    }
+    timer = setInterval(textCountDown, 1000);
 }
 
 function resetTimer(){
